@@ -1,0 +1,285 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.top-section-wrapper {
+  background-color: #001d37;
+  padding: 0 16px;
+  overflow: hidden;
+}
+
+.top-section {
+  color: #fff;
+  padding: 139px 0;
+  max-width: 1066px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.top-section::after,
+.top-section::before {
+  content: "";
+  width: 617px;
+  height: 617px;
+  border-radius: 100%;
+  opacity: 0.85;
+  position: absolute;
+  filter: blur(150px);
+}
+
+.top-section::after {
+  background-color: #d660ff;
+  right: -50%;
+  top: 62px;
+}
+
+.top-section::before {
+  background-color: #6079ff;
+  left: -12%;
+  top: -40%;
+}
+
+.top-content {
+  position: relative;
+  z-index: 5;
+}
+
+.top-section h1 {
+  font-size: 6.25rem;
+  margin: 0;
+  line-height: 97.3%;
+  max-width: 525px;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  line-height: 169.3%;
+  margin: 1rem 0;
+  max-width: 435px;
+}
+
+.intro-buttons {
+  margin-bottom: 129px;
+}
+
+@media screen and (width < 400px) {
+  .intro-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .intro-buttons button {
+    margin: 0;
+  }
+}
+
+.our-btn {
+  display: inline-block;
+  font-weight: 600;
+  border: 2px solid #475aff;
+  background-color: #475aff;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 71px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.our-btn:hover {
+  transform: scale(1.07);
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px 4px #6078ff5e;
+}
+
+.our-btn--outline {
+  border: 2px solid #fff;
+  background-color: transparent;
+}
+
+.utility-mr {
+  margin-right: 11px;
+}
+
+.intro-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 15px;
+}
+
+@media screen and (width < 650px) {
+  .intro-features {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+  }
+}
+
+@media screen and (width < 450px) {
+  .intro-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.intro-feature {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 33px 25px;
+}
+
+.intro-feature svg {
+  margin-bottom: 44px;
+}
+
+.intro-feature h2 {
+  margin: 0 0 7px 0;
+  font-size: 1.5rem;
+  line-height: 97.3%;
+  font-weight: 700;
+}
+
+.intro-feature p {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 151.18%;
+}
+
+.page-section {
+  background-color: #fff;
+  padding: 131px 16px;
+}
+
+.page-section-inner {
+  max-width: 1066px;
+  margin: 0 auto;
+}
+
+.page-section-title {
+  font-size: 5.3125rem;
+  margin: 0;
+  line-height: 97.3%;
+}
+
+.pet-filter p {
+  color: #9f9f9f;
+  font-size: 1.375rem;
+}
+
+.pet-filter button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.375rem;
+  color: #9f9f9f;
+  font-family: inherit;
+}
+
+.list-of-pets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  column-gap: 34px;
+  row-gap: 28px;
+}
+
+.pet-card {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f3f3;
+  overflow: hidden;
+}
+
+.pet-card-text {
+  padding: 20px 30px;
+}
+
+.pet-card-text h3 {
+  margin: 0 0 14px 0;
+  font-weight: 600;
+  font-size: 1.625rem;
+  color: #000;
+  line-height: 97.3%;
+}
+
+.pet-card-text .pet-description {
+  margin: 0 0 14px 0;
+  font-size: 1rem;
+  color: #626262;
+  line-height: 150%;
+}
+
+.pet-card-text .pet-age {
+  color: #a2a2a2;
+}
+
+.pet-card-photo {
+  order: 1;
+  grid-row: 1;
+  overflow: hidden;
+}
+
+.pet-card-photo img {
+  max-width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+
+.pet-card-photo img:hover {
+  transform: scale(1.5);
+  rotate: 10deg;
+}
+
+.site-footer {
+  padding: 0 0 70px 0;
+}
+
+.site-footer p {
+  color: #a6a6a6;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+@media screen and (width < 600px) {
+  .top-section {
+    padding: 80px 0 139px 0;
+  }
+
+  .top-section h1 {
+    font-size: 4rem;
+  }
+
+  .intro-buttons {
+    margin-bottom: 70px;
+  }
+
+  .page-section {
+    padding-top: 80px;
+  }
+
+  .page-section-title {
+    font-size: 4rem;
+  }
+
+  .pet-filter p {
+    font-size: 1.15rem;
+  }
+
+  .pet-filter button {
+    font-size: 1.15rem;
+  }
+
+  .list-of-pets {
+    row-gap: 10px;
+  }
+}
