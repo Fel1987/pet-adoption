@@ -42,7 +42,7 @@ const petsArea = async (url) => {
     clone.querySelector(".pet-age").textContent = creatAgeText(pet.birthYear);
     clone.querySelector(".pet-card-photo img").src = pet.photo
       ? pet.photo
-      : "https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/01/dummy-profile-pic.jpg";
+      : "./images/fallback.jpg";
     clone.querySelector(".pet-card-photo img").alt =
       `This is a picture of a ${pet.species} named ${pet.name}`;
     wrapper.appendChild(clone);
