@@ -52,3 +52,23 @@ const petsArea = async (url) => {
 };
 
 petsArea("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
+
+//Pet Filter Button
+
+const filterBtns = document.querySelectorAll(".pet-filter button");
+
+const handleButtonClick = function (event) {
+  //Remove .active class from any and all buttons
+  filterBtns.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  //Add .active class to the specific button that was clicked
+  event.target.classList.add("active");
+
+  //Filter the pets
+};
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", handleButtonClick);
+});
