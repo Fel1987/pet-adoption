@@ -72,11 +72,9 @@ const handleButtonClick = function (event) {
   const petCards = document.querySelectorAll(".pet-card");
 
   petCards.forEach((petCard) => {
-    if (currentFilter === petCard.dataset.species || currentFilter === "all") {
-      petCard.style.display = "grid";
-    } else {
-      petCard.style.display = "none";
-    }
+    currentFilter === petCard.dataset.species || currentFilter === "all"
+      ? (petCard.style.display = "grid")
+      : (petCard.style.display = "none");
   });
 };
 
