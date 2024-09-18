@@ -33,10 +33,10 @@ const petsArea = async (url) => {
   const pets = await fetch(url);
   const petsData = await pets.json();
 
-  console.log(petsData);
-
   petsData.forEach((pet) => {
     const clone = template.content.cloneNode(true);
+
+    clone.querySelector(".pet-card").dataset.species = pet.species;
     clone.querySelector("h3").textContent = pet.name;
     clone.querySelector(".pet-description").textContent = pet.description;
     clone.querySelector(".pet-age").textContent = creatAgeText(pet.birthYear);
@@ -67,6 +67,17 @@ const handleButtonClick = function (event) {
   event.target.classList.add("active");
 
   //Filter the pets
+  // console.log(event.target.attributes["data-filter"].value);
+  const currentFilter = event.target.dataset.filter;
+  const petCards = document.querySelectorAll(".pet-card");
+
+  petCards.forEach((petCard) => {
+    if (currentFilter === petCard.dataset.species || currentFilter === "all") {
+      petCard.style.display = "grid";
+    } else {
+      petCard.style.display = "none";
+    }
+  });
 };
 
 filterBtns.forEach((btn) => {
