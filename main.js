@@ -2,6 +2,9 @@ const temperatureElement = document.querySelector("#temperature");
 const template = document.querySelector("#pet-card-template");
 const wrapper = document.createDocumentFragment();
 const listOfPets = document.querySelector(".list-of-pets");
+const footerYear = document.querySelector(".footer-year");
+
+footerYear.textContent = new Date().getFullYear();
 
 const creatAgeText = (birthYear) => {
   const currentYear = new Date().getFullYear();
