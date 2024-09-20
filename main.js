@@ -54,7 +54,9 @@ const petsArea = async (url) => {
   listOfPets.appendChild(wrapper);
 };
 
-petsArea("https://learnwebcode.github.io/bootcamp-pet-data/pets.json");
+petsArea(
+  "https://frolicking-bavarois-307ab8.netlify.app/.netlify/functions/pets"
+);
 
 //Pet Filter Button
 
