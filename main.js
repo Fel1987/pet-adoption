@@ -54,9 +54,7 @@ const petsArea = async (url) => {
   listOfPets.appendChild(wrapper);
 };
 
-petsArea(
-  "https://frolicking-bavarois-307ab8.netlify.app/.netlify/functions/pets"
-);
+petsArea("https://netlify-pets-fel.netlify.app/.netlify/functions/pets");
 
 //Pet Filter Button
 
